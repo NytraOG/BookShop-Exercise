@@ -12,11 +12,6 @@ namespace MankindExerciseOOP
         static void Main(string[] args)
         {
             string input;
-            string firstName;
-            string lastName;
-            decimal weeklySalary;
-            int workHoursPerDay;
-            int facultyNr;
             var datenListe = new List<object>();
 
             do
@@ -26,11 +21,14 @@ namespace MankindExerciseOOP
                 var stringManager = new StringManager(input);
                 datenListe = stringManager.SplitString();
 
+                string firstName;
+                string lastName;
+
                 if (datenListe.Count == 3)
                 {
                     firstName = (string)datenListe[0];
                     lastName = (string)datenListe[1];
-                    facultyNr = (int)datenListe[2];
+                    var facultyNr = Convert.ToInt32(datenListe[2]);
 
                     var student = new Student(firstName, lastName, facultyNr);
 
@@ -41,8 +39,8 @@ namespace MankindExerciseOOP
                 {
                     firstName = (string)datenListe[0];
                     lastName = (string)datenListe[1];
-                    weeklySalary = (decimal)datenListe[2];
-                    workHoursPerDay = (int)datenListe[3];
+                    var weeklySalary = (decimal)datenListe[2];
+                    var workHoursPerDay = (int)datenListe[3];
 
                     var worker = new Worker(firstName, lastName, weeklySalary, workHoursPerDay);
 

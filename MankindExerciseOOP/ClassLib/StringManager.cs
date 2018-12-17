@@ -11,14 +11,14 @@ namespace ClassLib
         private const char Separator = ' ';
         private string incomingString;
 
-        public string IncomingString
-        {
-            set => incomingString = value;
-        }
-
         public StringManager(string incomingString)
         {
             IncomingString = incomingString;
+        }
+
+        public string IncomingString
+        {
+            set => incomingString = value;
         }
 
         public List<object> SplitString()

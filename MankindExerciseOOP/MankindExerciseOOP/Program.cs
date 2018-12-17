@@ -12,14 +12,13 @@ namespace MankindExerciseOOP
         static void Main(string[] args)
         {
             string input;
-            var datenListe = new List<object>();
 
             do
             {
                 input = Console.ReadLine();
 
                 var stringManager = new StringManager(input);
-                datenListe = stringManager.SplitString();
+                var datenListe = stringManager.SplitString();
 
                 string firstName;
                 string lastName;

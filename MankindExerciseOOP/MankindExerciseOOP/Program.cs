@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace MankindExerciseOOP
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             string input;
 
@@ -23,30 +23,36 @@ namespace MankindExerciseOOP
                 string firstName;
                 string lastName;
 
-                if (datenListe.Count == 3)
+                switch (datenListe.Count)
                 {
-                    firstName = (string)datenListe[0];
-                    lastName = (string)datenListe[1];
-                    var facultyNr = Convert.ToInt32(datenListe[2]);
+                    case 3:
+                        {
+                            firstName = (string)datenListe[0];
+                            lastName = (string)datenListe[1];
+                            var facultyNr = Convert.ToInt32(datenListe[2]);
 
-                    var student = new Student(firstName, lastName, facultyNr);
+                            var student = new Student(firstName, lastName, facultyNr);
 
-                    student.GetInfo();
+                            student.GetInfo();
+                            break;
+                        }
+                    case 4:
+                        {
+                            firstName = (string)datenListe[0];
+                            lastName = (string)datenListe[1];
+                            var weeklySalary = (decimal)datenListe[2];
+                            var workHoursPerDay = (int)datenListe[3];
+
+                            var worker = new Worker(firstName, lastName, weeklySalary, workHoursPerDay);
+
+                            worker.GetInfo();
+                            break;
+                        }
+
+                    default:
+                        break;
                 }
-
-                if (datenListe.Count == 4)
-                {
-                    firstName = (string)datenListe[0];
-                    lastName = (string)datenListe[1];
-                    var weeklySalary = (decimal)datenListe[2];
-                    var workHoursPerDay = (int)datenListe[3];
-
-                    var worker = new Worker(firstName, lastName, weeklySalary, workHoursPerDay);
-
-                    worker.GetInfo();
-                }
-
-            } while (!String.IsNullOrEmpty(input));
+            } while (!string.IsNullOrEmpty(input));
         }
     }
 }

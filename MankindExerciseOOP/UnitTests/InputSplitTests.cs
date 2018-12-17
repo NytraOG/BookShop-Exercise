@@ -16,8 +16,8 @@ namespace UnitTests
         public void ChecktDieAnzahlDerStringsNachDemSplitStudent()
         {
             //Arrange
-            string inputString = "Berthram Bobsen 36489";
-            int arrayCountExpected = 3;
+            const string inputString = "Berthram Bobsen 36489";
+            const int arrayCountExpected = 3;
             
             //Act
             var stringManager = new StringManager(inputString);
@@ -30,8 +30,8 @@ namespace UnitTests
         public void ChecktDieAnzahlDerStringsNachDemSplitWorker()
         {
             //Arrange
-            string inputString = "Charlotte Clein 1500 9";
-            int arrayCountExpected = 4;
+            const string inputString = "Charlotte Clein 1500 9";
+            const int arrayCountExpected = 4;
 
             //Act
             var stringManager = new StringManager(inputString);
@@ -44,12 +44,12 @@ namespace UnitTests
         public void IchGuckeObNachDemSplitDerStringInEinenDecimaloderIntGewandeltWordenist()
         {
             //Arrange
-            string inputString = "Kevin Klein 2668 8";
+            const string inputString = "Kevin Klein 2668 8";
 
-            string firstNameExpected = "Kevin";
-            string lastNameExpected = "Klein";
-            decimal weeklySalaryExpected = 2668;
-            int workHoursPerDayExpected = 8;
+            const string firstNameExpected = "Kevin";
+            const string lastNameExpected = "Klein";
+            const decimal weeklySalaryExpected = 2668;
+            const int workHoursPerDayExpected = 8;
 
             //Act
             var stringManager = new StringManager(inputString);

@@ -11,8 +11,8 @@ namespace UnitTests
         public void FirstLetterOfFirstNameToUpperCaseCheck()
         {
             //Arrange
-            string firstNameInput = "benjamin";
-            string firstNameOutputExpected = "Benjamin";
+            const string firstNameInput = "benjamin";
+            const string firstNameOutputExpected = "Benjamin";
 
             //Act
             var testMensch = new Human(firstNameInput, "Becher");
@@ -25,8 +25,8 @@ namespace UnitTests
         public void FirstLetterOfLastNameToUpperCaseCheck()
         {
             //Arrange
-            string lastNameInput = "becher";
-            string lastNameOutputExpected = "Becher";
+            const string lastNameInput = "becher";
+            const string lastNameOutputExpected = "Becher";
 
             //Act
             var testMensch = new Human("Benjamin", lastNameInput);
@@ -39,8 +39,8 @@ namespace UnitTests
         public void FirstLetterOfFirstNameStudentToUpperCheck()
         {
             //Arrange
-            string firstNameInput = "richard";
-            string firstNameOutputExpected = "Richard";
+            const string firstNameInput = "richard";
+            const string firstNameOutputExpected = "Richard";
 
             //Act
             var testStudent = new Student(firstNameInput, "Rolle", 1);
@@ -53,8 +53,8 @@ namespace UnitTests
         public void FirstLetterOfFirstNameWorkerToUpperCheck()
         {
             //Arrange
-            string firstNameInput = "richard";
-            string firstNameOutputExpected = "Richard";
+            const string firstNameInput = "richard";
+            const string firstNameOutputExpected = "Richard";
 
             //Act
             var testWorker = new Worker(firstNameInput, "Rolle", 8, 8);
@@ -67,8 +67,8 @@ namespace UnitTests
         public void LatterLettersOfFirstNameWorkerToLowerCheck()
         {
             //Arrange
-            string firstNameInput = "RiChArd";
-            string firstNameOutputExpected = "Richard";
+            const string firstNameInput = "RiChArd";
+            const string firstNameOutputExpected = "Richard";
 
             //Act
             var testWorker = new Worker(firstNameInput, "Rolle", 8, 8);

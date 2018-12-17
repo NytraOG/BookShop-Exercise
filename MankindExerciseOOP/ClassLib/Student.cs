@@ -12,8 +12,15 @@ namespace ClassLib
 
         public int FacultyNr { get; set; }
 
-        public Student(string firstName, string lastName) : base(firstName, lastName)
+        public Student(string firstName, string lastName, int facultyNr) : base(firstName, lastName)
         {
+            FacultyNr = facultyNr;
+        }
+
+        public override void GetInfo()
+        {
+            base.GetInfo();
+            Console.WriteLine($"Faculty Nr.: \t {FacultyNr}");
         }
     }
 }

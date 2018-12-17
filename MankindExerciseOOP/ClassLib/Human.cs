@@ -54,5 +54,12 @@ namespace ClassLib
                 }
             }
         }
+
+        public virtual void GetInfo()
+        {
+            Console.WriteLine($"\n" +
+                              $"First Name: \t {firstName}\n" +
+                              $"Last Name: \t {lastName}");
+        }
     }
 }

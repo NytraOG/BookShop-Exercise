@@ -15,10 +15,10 @@ namespace UnitTests
             string firstNameOutputExpected = "Benjamin";
 
             //Act
-            var testMensch = new Human(firstNameInput,"Becher");
+            var testMensch = new Human(firstNameInput, "Becher");
 
             //Assert
-            Assert.AreEqual(firstNameOutputExpected,testMensch.FirstName);
+            Assert.AreEqual(firstNameOutputExpected, testMensch.FirstName);
         }
 
         [TestMethod]
@@ -43,10 +43,10 @@ namespace UnitTests
             string firstNameOutputExpected = "Richard";
 
             //Act
-            var testStudent = new Student(firstNameInput,"Rolle");
+            var testStudent = new Student(firstNameInput, "Rolle", 1);
 
             //Assert
-            Assert.AreEqual(firstNameOutputExpected,testStudent.FirstName);
+            Assert.AreEqual(firstNameOutputExpected, testStudent.FirstName);
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace UnitTests
             string firstNameOutputExpected = "Richard";
 
             //Act
-            var testWorker = new Worker(firstNameInput, "Rolle");
+            var testWorker = new Worker(firstNameInput, "Rolle", 8, 8);
 
             //Assert
             Assert.AreEqual(firstNameOutputExpected, testWorker.FirstName);

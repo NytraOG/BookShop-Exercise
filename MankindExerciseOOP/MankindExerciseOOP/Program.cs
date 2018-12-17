@@ -11,8 +11,13 @@ namespace MankindExerciseOOP
     {
         static void Main(string[] args)
         {
-            var protoMensch = new Human("Bob","Becher");
+            var protoMensch = new Human("bob", "becher");
+            var protoStudent = new Student("hans", "maier", 1);
+            var protoWorker = new Worker("bernd", "busch", 200, 5);
 
+            protoMensch.GetInfo();
+            protoStudent.GetInfo();
+            protoWorker.GetInfo();
         }
     }
 }

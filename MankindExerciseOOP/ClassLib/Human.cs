@@ -25,7 +25,7 @@ namespace ClassLib
                 if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
                 {
                     string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
-                    string restString = value.Remove(0, 1);
+                    string restString = value.Remove(0, 1).ToLower();
 
                     firstName = anfangsBuchstabe + restString;
                 }
@@ -44,7 +44,7 @@ namespace ClassLib
                 if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
                 {
                     string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
-                    string restString = value.Remove(0, 1);
+                    string restString = value.Remove(0, 1).ToLower();
 
                     lastName = anfangsBuchstabe + restString;
                 }

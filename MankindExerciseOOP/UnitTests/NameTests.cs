@@ -62,5 +62,19 @@ namespace UnitTests
             //Assert
             Assert.AreEqual(firstNameOutputExpected, testWorker.FirstName);
         }
+
+        [TestMethod]
+        public void LatterLettersOfFirstNameWorkerToLowerCheck()
+        {
+            //Arrange
+            string firstNameInput = "RiChArd";
+            string firstNameOutputExpected = "Richard";
+
+            //Act
+            var testWorker = new Worker(firstNameInput, "Rolle", 8, 8);
+
+            //Assert
+            Assert.AreEqual(firstNameOutputExpected, testWorker.FirstName);
+        }
     }
 }

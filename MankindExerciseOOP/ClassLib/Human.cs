@@ -22,7 +22,7 @@ namespace ClassLib
             get => firstName;
             set
             {
-                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
+                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower() || value.Substring(1,value.Length-1) != value.Substring(1,value.Length-1).ToLower())
                 {
                     string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
                     string restString = value.Remove(0, 1).ToLower();
@@ -41,7 +41,7 @@ namespace ClassLib
             get => lastName;
             set
             {
-                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
+                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower() || value.Substring(1, value.Length - 1) != value.Substring(1, value.Length - 1).ToLower())
                 {
                     string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
                     string restString = value.Remove(0, 1).ToLower();

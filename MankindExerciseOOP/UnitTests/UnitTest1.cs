@@ -1,10 +1,11 @@
 ﻿using System;
+using ClassLib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class NameAlgorithmTests
     {
         [TestMethod]
         public void FirstLetterOfFirstNameToUpperCaseCheck()
@@ -14,9 +15,24 @@ namespace UnitTests
             string firstNameOutputExpected = "Benjamin";
 
             //Act
+            var testMensch = new Human(firstNameInput,"Becher");
 
             //Assert
-            
+            Assert.AreEqual(firstNameOutputExpected,testMensch.FirstName);
+        }
+
+        [TestMethod]
+        public void FirstLetterOfLastNameToUpperCaseCheck()
+        {
+            //Arrange
+            string lastNameInput = "becher";
+            string lastNameOutputExpected = "Becher";
+
+            //Act
+            var testMensch = new Human("Benjamin", lastNameInput);
+
+            //Assert
+            Assert.AreEqual(lastNameOutputExpected, testMensch.LastName);
         }
     }
 }

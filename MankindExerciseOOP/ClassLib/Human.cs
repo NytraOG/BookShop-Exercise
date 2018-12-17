@@ -17,12 +17,42 @@ namespace ClassLib
             LastName = lastName;
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public virtual string NameFormatter(string firstName)
+        public string FirstName
         {
-            return this.firstName;
+            get => firstName;
+            set
+            {
+                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
+                {
+                    string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
+                    string restString = value.Remove(0, 1);
+
+                    firstName = anfangsBuchstabe + restString;
+                }
+                else
+                {
+                    firstName = value;
+                }
+            }
+        }
+
+        public string LastName
+        {
+            get => lastName;
+            set
+            {
+                if (value.Substring(0, 1) == value.Substring(0, 1).ToLower())
+                {
+                    string anfangsBuchstabe = value.Substring(0, 1).ToUpper();
+                    string restString = value.Remove(0, 1);
+
+                    lastName = anfangsBuchstabe + restString;
+                }
+                else
+                {
+                    lastName = value;
+                }
+            }
         }
     }
 }

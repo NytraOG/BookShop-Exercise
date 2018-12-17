@@ -34,5 +34,33 @@ namespace UnitTests
             //Assert
             Assert.AreEqual(lastNameOutputExpected, testMensch.LastName);
         }
+
+        [TestMethod]
+        public void FirstLetterOfFirstNameStudentToUpperCheck()
+        {
+            //Arrange
+            string firstNameInput = "richard";
+            string firstNameOutputExpected = "Richard";
+
+            //Act
+            var testStudent = new Student(firstNameInput,"Rolle");
+
+            //Assert
+            Assert.AreEqual(firstNameOutputExpected,testStudent.FirstName);
+        }
+
+        [TestMethod]
+        public void FirstLetterOfFirstNameWorkerToUpperCheck()
+        {
+            //Arrange
+            string firstNameInput = "richard";
+            string firstNameOutputExpected = "Richard";
+
+            //Act
+            var testWorker = new Worker(firstNameInput, "Rolle");
+
+            //Assert
+            Assert.AreEqual(firstNameOutputExpected, testWorker.FirstName);
+        }
     }
 }

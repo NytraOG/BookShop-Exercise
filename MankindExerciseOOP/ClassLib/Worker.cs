@@ -8,8 +8,8 @@ namespace ClassLib
 {
     public class Worker : Human
     {
-        private decimal _weeklySalary;
-        private double _workHoursPerDay;
+        private decimal weeklySalary;
+        private double workHoursPerDay;
 
         public decimal WeeklySalary { get; set; }
         public double WorkHoursPerDay { get; set; }

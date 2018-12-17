@@ -8,7 +8,7 @@ namespace ClassLib
 {
     public class Student : Human
     {
-        private int _facultyNr;
+        private int facultyNr;
 
         public int FacultyNr { get; set; }
 

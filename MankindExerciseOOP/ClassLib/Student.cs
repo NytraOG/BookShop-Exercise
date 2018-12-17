@@ -20,7 +20,7 @@ namespace ClassLib
         public override void GetInfo()
         {
             base.GetInfo();
-            Console.WriteLine($"Faculty Nr.: \t {FacultyNr}");
+            Console.WriteLine($"Faculty Nr.: \t {FacultyNr}\n");
         }
     }
 }

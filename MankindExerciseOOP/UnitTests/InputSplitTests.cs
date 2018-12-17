@@ -23,7 +23,7 @@ namespace UnitTests
             var stringManager = new StringManager(inputString);
 
             //Assert
-            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Length);
+            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Count);
         }
 
         [TestMethod]
@@ -37,7 +37,29 @@ namespace UnitTests
             var stringManager = new StringManager(inputString);
 
             //Assert
-            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Length);
+            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Count);
+        }
+
+        [TestMethod]
+        public void IchGuckeObNachDemSplitDerStringInEinenDecimaloderIntGewandeltWordenist()
+        {
+            //Arrange
+            string inputString = "Kevin Klein 2668 8";
+
+            string firstNameExpected = "Kevin";
+            string lastNameExpected = "Klein";
+            decimal weeklySalaryExpected = 2668;
+            int workHoursPerDayExpected = 8;
+
+            //Act
+            var stringManager = new StringManager(inputString);
+            var testList = stringManager.SplitString();
+
+            //Assert
+            Assert.AreEqual(firstNameExpected, testList[0]);
+            Assert.AreEqual(lastNameExpected, testList[1]);
+            Assert.AreEqual(weeklySalaryExpected, testList[2]);
+            Assert.AreEqual(workHoursPerDayExpected, testList[3]);
         }
     }
 }

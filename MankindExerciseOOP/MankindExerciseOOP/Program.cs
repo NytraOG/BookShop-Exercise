@@ -11,13 +11,45 @@ namespace MankindExerciseOOP
     {
         static void Main(string[] args)
         {
-            var protoMensch = new Human("bob", "becher");
-            var protoStudent = new Student("hans", "maier", 1);
-            var protoWorker = new Worker("bernd", "busch", 200, 5);
+            string input;
+            string firstName;
+            string lastName;
+            decimal weeklySalary;
+            int workHoursPerDay;
+            int facultyNr;
+            var datenListe = new List<object>();
 
-            protoMensch.GetInfo();
-            protoStudent.GetInfo();
-            protoWorker.GetInfo();
+            do
+            {
+                input = Console.ReadLine();
+
+                var stringManager = new StringManager(input);
+                datenListe = stringManager.SplitString();
+
+                if (datenListe.Count == 3)
+                {
+                    firstName = (string)datenListe[0];
+                    lastName = (string)datenListe[1];
+                    facultyNr = (int)datenListe[2];
+
+                    var student = new Student(firstName, lastName, facultyNr);
+
+                    student.GetInfo();
+                }
+
+                if (datenListe.Count == 4)
+                {
+                    firstName = (string)datenListe[0];
+                    lastName = (string)datenListe[1];
+                    weeklySalary = (decimal)datenListe[2];
+                    workHoursPerDay = (int)datenListe[3];
+
+                    var worker = new Worker(firstName, lastName, weeklySalary, workHoursPerDay);
+
+                    worker.GetInfo();
+                }
+
+            } while (!String.IsNullOrEmpty(input));
         }
     }
 }

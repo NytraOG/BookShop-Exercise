@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class GoldenEditionBook : Book
+    public class GoldenEditionBook : Book
     {
         private const decimal GoldAufschlag = 1.3m;
+        private const string Description = "Golden Edition Book";
 
-        public GoldenEditionBook(string title, string author, decimal price, string description) : base(title, author, price, description)
+        public GoldenEditionBook(string title, string author, decimal price) : base(title, author, price)
         {
         }
 
-        public override string Description { get; set; }
         public override string Author { get; set; }
         public override string Title { get; set; }
         public override decimal Price
         {
             get => price;
             set => price = GoldAufschlag * value;
+        }
+
+        public override string ToString()
+        {
+            return $"\n Type: \t{Description}" +
+                   $"\n Title: \t{Title}" +
+                   $"\n Author: \t{Author}" +
+                   $"\n Price: \t{Price}";
         }
     }
 }

@@ -11,14 +11,13 @@ namespace ClassLibrary
         protected string title;
         protected string author;
         protected decimal price;
-        protected string description;
+        protected const string Description = "Book";
 
-        public Book(string title, string author, decimal price, string description)
+        public Book(string author, string title, decimal price)
         {
             Title = title;
             Author = author;
             Price = price;
-            Description = description;
         }
 
         public virtual string Title
@@ -42,7 +41,6 @@ namespace ClassLibrary
             }
         }
         public virtual string Author { get; set; }
-        public virtual string Description { get; set; }
 
         public virtual decimal Price
         {
@@ -63,6 +61,14 @@ namespace ClassLibrary
                     Console.WriteLine(e);
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            return $"\n Type: \t{Description}" +
+                   $"\n Title: \t{Title}" +
+                   $"\n Author: \t{Author}" +
+                   $"\n Price: \t{Price}";
         }
     }
 }

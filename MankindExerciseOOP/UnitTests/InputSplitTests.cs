@@ -1,10 +1,4 @@
-﻿using System;
-using ClassLib;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClassLib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests

@@ -20,10 +20,10 @@ namespace UnitTests
             const int arrayCountExpected = 3;
             
             //Act
-            var stringManager = new StringManager(inputString);
+            var stringManager = new StringManager();
 
             //Assert
-            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Count);
+            Assert.AreEqual(arrayCountExpected, stringManager.SplitString(inputString).Count);
         }
 
         [TestMethod]
@@ -34,10 +34,10 @@ namespace UnitTests
             const int arrayCountExpected = 4;
 
             //Act
-            var stringManager = new StringManager(inputString);
+            var stringManager = new StringManager();
 
             //Assert
-            Assert.AreEqual(arrayCountExpected, stringManager.SplitString().Count);
+            Assert.AreEqual(arrayCountExpected, stringManager.SplitString(inputString).Count);
         }
 
         [TestMethod]
@@ -52,8 +52,8 @@ namespace UnitTests
             const int workHoursPerDayExpected = 8;
 
             //Act
-            var stringManager = new StringManager(inputString);
-            var testList = stringManager.SplitString();
+            var stringManager = new StringManager();
+            var testList = stringManager.SplitString(inputString);
 
             //Assert
             Assert.AreEqual(firstNameExpected, testList[0]);

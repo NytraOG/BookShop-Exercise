@@ -17,8 +17,8 @@ namespace MankindExerciseOOP
             {
                 input = Console.ReadLine();
 
-                var stringManager = new StringManager(input);
-                var datenListe = stringManager.SplitString();
+                var stringManager = new StringManager();
+                var datenListe = stringManager.SplitString(input);
 
                 string firstName;
                 string lastName;

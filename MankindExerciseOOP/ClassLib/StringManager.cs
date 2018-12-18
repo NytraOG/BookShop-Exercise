@@ -9,19 +9,19 @@ namespace ClassLib
     public class StringManager
     {
         private const char Separator = ' ';
-        private string incomingString;
+        //private string incomingString;
 
-        public StringManager(string incomingString)
-        {
-            IncomingString = incomingString;
-        }
+        //public StringManager(string incomingString)
+        //{
+        //    IncomingString = incomingString;
+        //}
 
-        public string IncomingString
-        {
-            set => incomingString = value;
-        }
+        //public string IncomingString
+        //{
+        //    set => incomingString = value;
+        //}
 
-        public List<object> SplitString()
+        public List<object> SplitString(string incomingString)
         {
             var listIn = incomingString.Split(Separator).ToList();
             var listOut = new List<object>();
